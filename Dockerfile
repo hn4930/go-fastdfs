@@ -9,7 +9,7 @@ RUN set -xe; \
 	git clone https://github.com/hn4930/go-fastdfs.git ; \
 	cd go-fastdfs; mv vendor src ; mv src .. ; cd .. ; mv go-fastdfs src/github.com/sjqzhang/ ; export GOPATH=/root/repo ; cd  src/github.com/sjqzhang/go-fastdfs ; \
 	 export GO111MODULE="off"; \
-	CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -a -installsuffix cgo -o fileserver; \
+	CGO_ENABLED=0 GOOS=linux GOARCH=arm64 go build -a -installsuffix cgo -o fileserver; \
 	ls -lh .;
 FROM registry.cn-hangzhou.aliyuncs.com/prince/alpine-bash
 
